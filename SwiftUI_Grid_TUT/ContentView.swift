@@ -21,8 +21,8 @@ struct ContentView: View {
     ]
     
     var body: some View {
-        ScrollView() {
-            LazyVGrid(columns:layout, spacing: 20) {
+        ScrollView(.horizontal) {
+            LazyHGrid(rows:layout, spacing: 20) {
                 ForEach(data, id: \.self) {i in
                     VStack {
                         Capsule()
